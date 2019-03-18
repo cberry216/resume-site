@@ -13,6 +13,7 @@ class Project(models.Model):
     short_description = models.TextField()
     long_description = models.TextField()
     link_to = models.CharField(max_length=200)
+    publish = models.DateTimeField(default=timezone.now)
 
     tags = TaggableManager()
 
