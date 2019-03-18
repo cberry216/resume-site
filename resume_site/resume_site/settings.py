@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
 
     # 3rd Party Apps
-
+    'taggit',
 
     # Django Apps
     'django.contrib.admin',

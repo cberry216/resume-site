@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
 
+from taggit.managers import TaggableManager
+
 # Create your models here.
 
 
@@ -12,8 +14,10 @@ class Project(models.Model):
     long_description = models.TextField()
     link_to = models.CharField(max_length=200)
 
+    tags = TaggableManager()
+
     class Meta:
-        ordering = ('title')
+        ordering = ('title',)
 
     def __str__(self):
         return self.title
