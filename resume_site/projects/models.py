@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 
 from taggit.managers import TaggableManager
 # Create your models here.
@@ -22,3 +23,6 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('projects:project_detail', args=[self.slug])
