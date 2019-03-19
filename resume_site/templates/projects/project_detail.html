@@ -11,15 +11,15 @@
   </div>
   <div class="project__metadata">
     <div class="project__tags">
-      <p class="metadata_title">Tags:</p>
+      <p class="metadata-title">Tags:</p>
       {% for tag in project.tags.all %}
-        <div class="project__tag project__tag--green">
-          <p>{{ tag.name }}</p>
-        </div>
+      <a href="{% url 'projects:project_list_by_tag' tag.name %}" class="project__tag project__tag--green">
+        <p>{{ tag.name }}</p>
+      </a>
       {% endfor %}
     </div>
     <div class="project__language">
-      <p class="metadata_title">Main Language:</p>
+      <p class="metadata-title">Main Language:</p>
       <p class="project__tag project__tag--blue">{{ project.language }}</p>
     </div>
   </div>

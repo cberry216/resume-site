@@ -3,6 +3,13 @@
 {% block title %}Projects{% endblock title %}
 
 {% block content %}
+{% if tag %}
+<div class="tag-filter">
+  <h4 class="tag-filter__showing">Showing Projects Tagged:</h4>
+  <div class="project__tag project__tag--green project__tag--filter">{{tag.name}}</div>
+  <a href="{% url 'projects:project_list' %}" class="tag-filter__close">&times</a>
+</div>
+{% endif %}
 <div class="project_list">
   {% for project in project_list %}
   <div class="project">

@@ -63,6 +63,26 @@ body {
 	text-shadow: 1px 1px 2px #afafaf;
 }
 
+.tag-filter {
+	width: 80%;
+	margin: 15px 10% 0 10%;
+
+	display: flex;
+}
+
+.tag-filter__showing {
+	margin: 0;
+	font-size: 1.5em;
+}
+
+.tag-filter__close {
+	margin: auto 0 auto 10px;
+	color: red;
+
+	font-size: 1.5em;
+	text-decoration: none;
+}
+
 .project_list {
 	display: flex;
 	flex-direction: column;
@@ -113,7 +133,7 @@ body {
 	grid-row: 1 / 2;
 }
 
-.metadata_title {
+.metadata-title {
 	margin: 0;
 }
 
@@ -123,6 +143,7 @@ body {
 	color: white;
 	border-radius: 3px;
 	box-shadow: 1px 1px 2px grey;
+	text-decoration: none;
 }
 
 .project__tag--green {
@@ -131,6 +152,10 @@ body {
 
 .project__tag--blue {
 	background-color: #5a7c97;
+}
+
+.project__tag--filter {
+	margin-top: 5px;
 }
 
 .project__tag p {
