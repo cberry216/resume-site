@@ -3,15 +3,17 @@
 {% block title %}Projects{% endblock title %}
 
 {% block content %}
-  <div class="project_list">
-    {% for project in project_list %}
-      <div class="project">
-        <h2 class="project__title">{{ project.title }}</h2>
-        <div class="project__image">
-          <img src="{{ project.image.url }}" alt="{{ project.title }} image">
-        </div>
-        <p class="project__short-description">{{ project.short_description }}</p>
-      </div>
-    {% endfor %}
+<div class="project_list">
+  {% for project in project_list %}
+  <div class="project">
+    <h2 class="project__title"><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h2>
+    <div class="project__image">
+      <img src="{{ project.image.url }}" alt="{{ project.title }} image">
+    </div>
+    <p class="project__short-description">{{ project.short_description }} <a href="{{ project.get_absolute_url}}">
+        More
+        Info</a>.</p>
   </div>
+  {% endfor %}
+</div>
 {% endblock content %}
