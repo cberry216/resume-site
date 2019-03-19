@@ -11,7 +11,8 @@ class Project(models.Model):
     image = models.ImageField(blank=True, null=True, upload_to='projects/')
     short_description = models.TextField()
     long_description = models.TextField()
-    link_to = models.CharField(max_length=200)
+    language = models.CharField(max_length=40)
+    github_link = models.CharField(max_length=200)
     publish = models.DateTimeField(default=timezone.now)
 
     tags = TaggableManager()
