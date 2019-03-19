@@ -79,9 +79,13 @@ body {
 	font-size: 2em;
 }
 
+.project__github-link {
+	margin-left: 15px;
+}
+
 .project__image {
 	height: 70vh;
-	width: 95%;
+	width: 85%;
 	margin: auto;
 	overflow: hidden;
 	border: 1px solid #a7a7a7;
@@ -93,7 +97,60 @@ body {
 	width: 100%;
 }
 
+.project__metadata {
+	width: 80%;
+	margin: 10px 10% 5px 10%;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+}
+
+.project__tags {
+	display: flex;
+
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+
+.metadata_title {
+	margin: 0;
+}
+
+.project__tag {
+	margin: 0 5px;
+	padding: 0 5px;
+	color: white;
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px grey;
+}
+
+.project__tag--green {
+	background-color: #54a951;
+}
+
+.project__tag--blue {
+	background-color: #5a7c97;
+}
+
+.project__tag p {
+	margin: 0;
+}
+
+.project__language {
+	display: flex;
+
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+	justify-self: end;
+}
+
 .project__short-description {
 	width: 80%;
 	margin: 10px auto;
+}
+
+.project__long-description {
+	width: 80%;
+	margin: 0 10%;
 }
