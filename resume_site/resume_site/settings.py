@@ -37,6 +37,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # Custom Apps
     'projects.apps.ProjectsConfig',
+    'work.apps.WorkConfig',
 
     # 3rd Party Apps
     'taggit',
