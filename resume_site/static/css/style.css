@@ -63,19 +63,19 @@ body {
 	text-shadow: 1px 1px 2px #afafaf;
 }
 
-.tag-filter {
+.filter {
 	width: 80%;
 	margin: 15px 10% 0 10%;
 
 	display: flex;
 }
 
-.tag-filter__showing {
+.filter__showing {
 	margin: 0;
 	font-size: 1.5em;
 }
 
-.tag-filter__close {
+.filter__close {
 	margin: auto 0 auto 10px;
 	color: red;
 
@@ -90,13 +90,21 @@ body {
 
 .project {
 	margin: 10px 5% 20px 5%;
+	padding: 0 10px;
 	height: auto;
+	/* background-color: #f7f3e6; */
+	border-radius: 3px;
+
 	display: flex;
 	flex-direction: column;
 }
 
 .project__title {
 	font-size: 2em;
+}
+
+.project__title a {
+	text-decoration: none;
 }
 
 .project__github-link {

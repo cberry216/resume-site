@@ -4,10 +4,17 @@
 
 {% block content %}
 {% if tag %}
-<div class="tag-filter">
-  <h4 class="tag-filter__showing">Showing Projects Tagged:</h4>
+<div class="filter">
+  <h4 class="filter__showing">Showing Projects Tagged:</h4>
   <div class="project__tag project__tag--green project__tag--filter">{{tag.name}}</div>
-  <a href="{% url 'projects:project_list' %}" class="tag-filter__close">&times</a>
+  <a href="{% url 'projects:project_list' %}" class="filter__close">&times</a>
+</div>
+{% endif %}
+{% if lang %}
+<div class="filter">
+  <h4 class="filter__showing">Showing Projects Written In:</h4>
+  <div class="project__tag project__tag--blue project__tag--filter">{{ lang }}</div>
+  <a href="{% url 'projects:project_list' %}" class="filter__close">&times</a>
 </div>
 {% endif %}
 <div class="project_list">

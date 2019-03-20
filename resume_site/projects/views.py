@@ -28,6 +28,20 @@ def project_list_by_tag(request, tag_slug=None):
     })
 
 
+def project_list_by_language(request, language=None):
+    object_list = Project.objects.all()
+
+    lang = None
+    if language:
+        lang = language
+        object_list = object_list.filter(language=language)
+
+    return render(request, 'projects/project_list.html', {
+        'project_list': object_list,
+        'lang': lang
+    })
+
+
 class ProjectDetailView(DetailView):
     model = Project
     template_name = 'projects/project_detail.html'

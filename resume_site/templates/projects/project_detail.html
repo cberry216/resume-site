@@ -19,8 +19,8 @@
       {% endfor %}
     </div>
     <div class="project__language">
-      <p class="metadata-title">Main Language:</p>
-      <p class="project__tag project__tag--blue">{{ project.language }}</p>
+      <p class="metadata-title">Language:</p>
+      <a href="{% url 'projects:project_list_by_language' project.language %}" class="project__tag project__tag--blue">{{ project.language }}</a>
     </div>
   </div>
   <p class="project__short-description">{{ project.short_description }}</p>
