@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 
 # Create your models here.
@@ -20,3 +21,6 @@ class Job(models.Model):
 
     def __str__(self):
         return self.company + ' - ' + self.title
+
+    def get_absolute_url(self):
+        return reverse("work:work_detail", args=[self.slug])
