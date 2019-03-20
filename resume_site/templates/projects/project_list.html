@@ -17,14 +17,14 @@
   <a href="{% url 'projects:project_list' %}" class="filter__close">&times</a>
 </div>
 {% endif %}
-<div class="project_list">
+<div class="list">
   {% for project in project_list %}
-  <div class="project">
-    <h2 class="project__title"><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h2>
-    <div class="project__image">
+  <div class="list-item">
+    <h2 class="list-item__title"><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h2>
+    <div class="list-item__image">
       <img src="{{ project.image.url }}" alt="{{ project.title }} image">
     </div>
-    <p class="project__short-description">{{ project.short_description }} <a href="{{ project.get_absolute_url}}">
+    <p class="list-item__short-description">{{ project.short_description }} <a href="{{ project.get_absolute_url}}">
         More
         Info</a>.</p>
   </div>
