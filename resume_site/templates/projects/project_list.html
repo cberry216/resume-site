@@ -6,14 +6,14 @@
 {% if tag %}
 <div class="filter">
   <h4 class="filter__showing">Showing Projects Tagged:</h4>
-  <div class="project__tag project__tag--green project__tag--filter">{{tag.name}}</div>
+  <div class="item__tag item__tag--green item__tag--filter">{{tag.name}}</div>
   <a href="{% url 'projects:project_list' %}" class="filter__close">&times</a>
 </div>
 {% endif %}
 {% if lang %}
 <div class="filter">
   <h4 class="filter__showing">Showing Projects Written In:</h4>
-  <div class="project__tag project__tag--blue project__tag--filter">{{ lang }}</div>
+  <div class="item__tag item__tag--blue item__tag--filter">{{ lang }}</div>
   <a href="{% url 'projects:project_list' %}" class="filter__close">&times</a>
 </div>
 {% endif %}

@@ -3,28 +3,28 @@
 {% block title %}{{ project.title }}{% endblock title %}
 
 {% block content %}
-<div class="project">
-  <h2 class="project__title">{{ project.title }}<a href="{{ project.github_link }}" target="_blank"><i
-        class="project__github-link fab fa-github"></i></a></h2>
-  <div class="project__image">
+<div class="item">
+  <h2 class="item__title">{{ project.title }}<a href="{{ project.github_link }}" target="_blank"><i
+        class="item__github-link fab fa-github"></i></a></h2>
+  <div class="item__image">
     <img src="{{ project.image.url }}" alt="{{ project.title }} image">
   </div>
-  <div class="project__metadata">
-    <div class="project__tags">
+  <div class="item__metadata">
+    <div class="item__tags">
       <p class="metadata-title">Tags:</p>
       {% for tag in project.tags.all %}
-      <a href="{% url 'projects:project_list_by_tag' tag.name %}" class="project__tag project__tag--green">
+      <a href="{% url 'projects:project_list_by_tag' tag.name %}" class="item__tag item__tag--green">
         <p>{{ tag.name }}</p>
       </a>
       {% endfor %}
     </div>
-    <div class="project__language">
+    <div class="item__language">
       <p class="metadata-title">Language:</p>
       <a href="{% url 'projects:project_list_by_language' project.language %}"
-        class="project__tag project__tag--blue">{{ project.language }}</a>
+        class="item__tag item__tag--blue">{{ project.language }}</a>
     </div>
   </div>
-  <p class="project__short-description">{{ project.short_description }}</p>
-  <div class="project__long-description">{{ project.long_description|linebreaks}}</div>
+  <p class="item__short-description">{{ project.short_description }}</p>
+  <div class="item__long-description">{{ project.long_description|linebreaks}}</div>
 </div>
 {% endblock content %}
