@@ -23,4 +23,4 @@ class Job(models.Model):
         return self.company + ' - ' + self.title
 
     def get_absolute_url(self):
-        return reverse("work:work_detail", args=[self.slug])
+        return reverse("work:job_detail", args=[self.slug])
