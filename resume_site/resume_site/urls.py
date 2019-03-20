@@ -21,7 +21,8 @@ from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('projects.urls'))
+    path('', include('projects.urls')),
+    path('work/', include('work.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
