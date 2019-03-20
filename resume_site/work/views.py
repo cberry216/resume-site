@@ -7,10 +7,10 @@ from .models import Job
 
 class JobListView(ListView):
     model = Job
-    template_name = 'work/work_list.html'
+    template_name = 'work/job_list.html'
     context_object_name = 'jobs'
 
 
 class JobDetailView(DetailView):
     model = Job
-    template_name = 'work/work_detail.html'
+    template_name = 'work/job_detail.html'
