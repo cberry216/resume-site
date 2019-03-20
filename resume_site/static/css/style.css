@@ -88,7 +88,6 @@ body {
 	flex-direction: column;
 }
 
-.list-item,
 .item {
 	margin: 10px 5% 20px 5%;
 	padding: 0 10px;
@@ -99,27 +98,22 @@ body {
 	flex-direction: column;
 }
 
-.list-item__title,
 .item__title {
 	font-size: 2em;
 }
 
-.list-item__subtitle,
 .item__subtitle {
 	font-size: 1em;
 }
 
-.list-item__title a,
 .item__title a {
 	text-decoration: none;
 }
 
-.list-item__github-link,
 .item__github-link {
 	margin-left: 15px;
 }
 
-.list-item__image,
 .item__image {
 	height: 70vh;
 	width: 85%;
@@ -129,13 +123,11 @@ body {
 	box-shadow: 1px 1px 5px grey;
 }
 
-.list-item__image img,
 .item__image img {
 	height: 70vh;
 	width: 100%;
 }
 
-.list-item__metadata,
 .item__metadata {
 	width: 80%;
 	margin: 10px 10% 5px 10%;
@@ -145,7 +137,6 @@ body {
 	grid-template-rows: 1fr;
 }
 
-.list-item__tags,
 .item__tags {
 	display: flex;
 
@@ -157,7 +148,6 @@ body {
 	margin: 0;
 }
 
-.list-item__tag,
 .item__tag {
 	margin: 0 5px;
 	padding: 0 5px;
@@ -167,27 +157,22 @@ body {
 	text-decoration: none;
 }
 
-.list-item__tag--green,
 .item__tag--green {
 	background-color: #54a951;
 }
 
-.list-item__tag--blue,
 .item__tag--blue {
 	background-color: #5a7c97;
 }
 
-.list-item__tag--filter,
 .item__tag--filter {
 	margin-top: 5px;
 }
 
-.list-item__tag p,
 .item__tag p {
 	margin: 0;
 }
 
-.list-item__language,
 .item__language {
 	display: flex;
 
@@ -196,13 +181,11 @@ body {
 	justify-self: end;
 }
 
-.list-item__short-description,
 .item__short-description {
 	width: 80%;
 	margin: 10px auto;
 }
 
-.list-item__long-description,
 .item__long-description {
 	width: 80%;
 	margin: 0 10%;

@@ -19,12 +19,12 @@
 {% endif %}
 <div class="list">
   {% for project in project_list %}
-  <div class="list-item">
-    <h2 class="list-item__title"><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h2>
-    <div class="list-item__image">
+  <div class="item">
+    <h2 class="item__title"><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h2>
+    <div class="item__image">
       <img src="{{ project.image.url }}" alt="{{ project.title }} image">
     </div>
-    <p class="list-item__short-description">{{ project.short_description }} <a href="{{ project.get_absolute_url}}">
+    <p class="item__short-description">{{ project.short_description }} <a href="{{ project.get_absolute_url}}">
         More
         Info</a>.</p>
   </div>
