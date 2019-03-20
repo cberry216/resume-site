@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Work{% endblock title %}
+
+{% block content %}
+<div class="list">
+  {% for job in jobs %}
+    <div class="item">
+      <h2 class="item__title"><a href="{{ job.get_absolute_url }}">{{ job.company }}</a></h2>
+      <h3 class="item__subtitle"> {{ job.title }}</h3>
+      <div class="item__image">
+        <img src="{{ job.image.url }}" alt="{{job.company }} - {{ job.title }} image">
+      </div>
+      <p class="item__description">{{ job.description }} <a href="{{ job.get_absolute_url}}">
+        More
+        Info</a>.</p>
+    </div>
+  {% endfor %}
+</div>
+{% endblock content %}

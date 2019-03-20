@@ -107,6 +107,7 @@ body {
 }
 
 .item__title a {
+	color: #551a8b;
 	text-decoration: none;
 }
 
@@ -181,6 +182,7 @@ body {
 	justify-self: end;
 }
 
+.item__description,
 .item__short-description {
 	width: 80%;
 	margin: 10px auto;
