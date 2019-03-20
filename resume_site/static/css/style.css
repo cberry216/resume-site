@@ -89,7 +89,7 @@ body {
 }
 
 .list-item,
-.project {
+.item {
 	margin: 10px 5% 20px 5%;
 	padding: 0 10px;
 	height: auto;
@@ -100,21 +100,27 @@ body {
 }
 
 .list-item__title,
-.project__title {
+.item__title {
 	font-size: 2em;
 }
 
+.list-item__subtitle,
+.item__subtitle {
+	font-size: 1em;
+}
+
 .list-item__title a,
-.project__title a {
+.item__title a {
 	text-decoration: none;
 }
 
-.project__github-link {
+.list-item__github-link,
+.item__github-link {
 	margin-left: 15px;
 }
 
 .list-item__image,
-.project__image {
+.item__image {
 	height: 70vh;
 	width: 85%;
 	margin: auto;
@@ -124,13 +130,13 @@ body {
 }
 
 .list-item__image img,
-.project__image img {
+.item__image img {
 	height: 70vh;
 	width: 100%;
 }
 
 .list-item__metadata,
-.project__metadata {
+.item__metadata {
 	width: 80%;
 	margin: 10px 10% 5px 10%;
 
@@ -140,7 +146,7 @@ body {
 }
 
 .list-item__tags,
-.project__tags {
+.item__tags {
 	display: flex;
 
 	grid-column: 1 / 2;
@@ -152,7 +158,7 @@ body {
 }
 
 .list-item__tag,
-.project__tag {
+.item__tag {
 	margin: 0 5px;
 	padding: 0 5px;
 	color: white;
@@ -162,27 +168,27 @@ body {
 }
 
 .list-item__tag--green,
-.project__tag--green {
+.item__tag--green {
 	background-color: #54a951;
 }
 
 .list-item__tag--blue,
-.project__tag--blue {
+.item__tag--blue {
 	background-color: #5a7c97;
 }
 
 .list-item__tag--filter,
-.project__tag--filter {
+.item__tag--filter {
 	margin-top: 5px;
 }
 
 .list-item__tag p,
-.project__tag p {
+.item__tag p {
 	margin: 0;
 }
 
 .list-item__language,
-.project__language {
+.item__language {
 	display: flex;
 
 	grid-column: 2 / 3;
@@ -191,12 +197,13 @@ body {
 }
 
 .list-item__short-description,
-.project__short-description {
+.item__short-description {
 	width: 80%;
 	margin: 10px auto;
 }
 
-.project__long-description {
+.list-item__long-description,
+.item__long-description {
 	width: 80%;
 	margin: 0 10%;
 }
