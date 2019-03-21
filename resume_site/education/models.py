@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 # Create your models here.
 
@@ -18,3 +19,6 @@ class Education(models.Model):
 
     def __str__(self):
         return self.college
+
+    def get_absolute_url(self):
+        return reverse("education:education_detail", args=[self.slug])
