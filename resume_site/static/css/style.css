@@ -99,11 +99,8 @@ body {
 }
 
 .item__title {
+	margin-bottom: 10px;
 	font-size: 2em;
-}
-
-.item__subtitle {
-	font-size: 1em;
 }
 
 .item__title a {
@@ -111,8 +108,10 @@ body {
 	text-decoration: none;
 }
 
-.item__github-link {
+.item__github-link,
+.item__website-link {
 	margin-left: 15px;
+	color: #551a8b;
 }
 
 .item__image {
@@ -138,11 +137,45 @@ body {
 	grid-template-rows: 1fr;
 }
 
-.item__tags {
+.item__tags,
+.item__start-date {
 	display: flex;
 
 	grid-column: 1 / 2;
 	grid-row: 1 / 2;
+}
+
+.item__start-date,
+.item__end-date {
+	text-align: center;
+
+	flex-direction: column;
+}
+
+.item__start-date h4,
+.item__start-date p,
+.item__end-date h4,
+.item__end-date p {
+	margin: 0;
+}
+
+.item__start-date p,
+.item__end-date p {
+	color: white;
+}
+
+.item__start-date p {
+	background-color: #54a951;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	box-shadow: 1px 1px 2px grey;
+}
+
+.item__end-date p {
+	background-color: #5a7c97;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	box-shadow: 1px 1px 2px grey;
 }
 
 .metadata-title {
@@ -174,11 +207,15 @@ body {
 	margin: 0;
 }
 
-.item__language {
+.item__language,
+.item__end-date {
 	display: flex;
 
 	grid-column: 2 / 3;
 	grid-row: 1 / 2;
+}
+
+.item__language {
 	justify-self: end;
 }
 
@@ -188,7 +225,20 @@ body {
 	margin: 10px auto;
 }
 
+.item__description a,
+.item__short-description a {
+	color: #551a8b;
+}
+
 .item__long-description {
 	width: 80%;
 	margin: 0 10%;
+}
+
+.item__published {
+	width: 80%;
+	margin: 0 10%;
+	color: #aaaaaa;
+
+	text-align: right;
 }
