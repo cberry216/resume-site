@@ -22,4 +22,4 @@ class Experience(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('life:experience_list', args=[self.slug])
+        return reverse('life:experience_detail', args=[self.slug])
