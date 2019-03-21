@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ education.abbreviation }}{% endblock title %}
+
+{% block content %}
+<div class="item">
+  <h2 class="item__title">{{ education.college}}</h2>
+  <div class="item__image">
+    <img src="{{ education.image.url }}" alt=" {{ education.colleg }} image">
+  </div>
+  <div class="item__metadata">
+    <div class="item__start-date">
+      <h4>Started:</h4>
+      <p>{{ education.date_started|date:"M Y" }}</p>
+    </div>
+    <div class="item__end-date">
+      <h4>Ended:</h4>
+      {% if education.date_ended %}
+        <p>{{ education.date_ended|date:"M Y" }}</p>
+      {% else %}
+        <p>?</p>
+      {% endif %}
+    </div>
+  </div>
+  <p class="item__description">{{ education.description }}</p>
+  <div class="item__long-description">{{ education.long_description|linebreaks }}</div>
+  <p class="item__published">Published {{ education.publish }}</p>
+</div>
+{% endblock content %}
