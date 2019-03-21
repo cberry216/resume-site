@@ -6,6 +6,7 @@ from django.utils import timezone
 
 class Education(models.Model):
     college = models.CharField(max_length=70)
+    abbreviation = models.CharField(max_length=10)
     slug = models.SlugField(max_length=70)
     image = models.ImageField(blank=True, null=True, upload_to='college')
     date_started = models.DateField()
