@@ -13,6 +13,7 @@ class Job(models.Model):
     date_started = models.DateField()
     date_ended = models.DateField(blank=True, null=True)
     description = models.TextField()
+    long_description = models.TextField()
     website_link = models.CharField(max_length=200)
     publish = models.DateTimeField(default=timezone.now)
 
