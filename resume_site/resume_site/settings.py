@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     # Custom Apps
     'projects.apps.ProjectsConfig',
     'work.apps.WorkConfig',
-    'personal.apps.PersonalConfig',
+    'education.apps.EducationConfig',
+    'life.apps.LifeConfig',
 
     # 3rd Party Apps
     'taggit',
