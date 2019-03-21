@@ -6,6 +6,6 @@ from .models import Job
 @admin.register(Job)
 class JobAdmin(admin.ModelAdmin):
     list_display = ('company', 'title', 'slug', 'publish')
-    search_fields = ('company', 'title', 'description')
+    search_fields = ('company', 'title', 'description', 'long_description')
     prepopulated_fields = {'slug': ('company', 'title')}
     ordering = ('-publish',)
