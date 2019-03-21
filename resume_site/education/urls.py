@@ -9,5 +9,5 @@ app_name = 'education'
 
 urlpatterns = [
     path('', EducationListView.as_view(), name='education_list'),
-    path('edu/<slug:slug>', EducationListView.as_view(), name='education_detail')
+    path('college/<slug:slug>', EducationListView.as_view(), name='education_detail')
 ]
