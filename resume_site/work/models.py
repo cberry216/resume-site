@@ -16,6 +16,7 @@ class Job(models.Model):
     long_description = models.TextField()
     website_link = models.CharField(max_length=200)
     publish = models.DateTimeField(default=timezone.now)
+    updated = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ('-publish',)

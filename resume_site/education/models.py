@@ -14,6 +14,7 @@ class Education(models.Model):
     description = models.TextField()
     long_description = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
+    updated = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ('-publish',)

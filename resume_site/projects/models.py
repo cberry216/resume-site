@@ -15,6 +15,7 @@ class Project(models.Model):
     language = models.CharField(max_length=40)
     github_link = models.CharField(max_length=200)
     publish = models.DateTimeField(default=timezone.now)
+    updated = models.DateTimeField(auto_now_add=True)
 
     tags = TaggableManager()
 
