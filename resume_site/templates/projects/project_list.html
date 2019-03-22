@@ -22,7 +22,9 @@
   <div class="item">
     <h2 class="item__title"><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h2>
     <div class="item__image">
-      <img src="{{ project.image.url }}" alt="{{ project.title }} image">
+      <a href="{{ project.get_absolute_url }}">
+        <img src="{{ project.image.url }}" alt="{{ project.title }} image">
+      </a>
     </div>
     <p class="item__short-description">{{ project.short_description }} <a href="{{ project.get_absolute_url}}">
         More
