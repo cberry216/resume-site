@@ -16,12 +16,13 @@
       <h3 class="header__subtitle">christopherberry216@gmail.com</h3>
     </div>
     <div class="menu">
-      <div class="menu__item"><a href="{% url 'projects:project_list' %}" class="menu__link" id="projects_link">Projects</a></div>
-      <div class="menu__item"><a href="{% url 'work:job_list' %}" class="menu__link" id="work_link">Work</a></div>
-      <div class="menu__item"><a href="{% url 'education:education_list' %}" class="menu__link" id="education_link">Education</a></div>
-      <div class="menu__item"><a href="{% url 'life:experience_list' %}" class="menu__link" id="life_link">Life</a></div>
+      <div class="menu__item menu__item--projects"><a href="{% url 'projects:project_list' %}" class="menu__link" id="projects_link">Projects</a></div>
+      <div class="menu__item menu__item--work"><a href="{% url 'work:job_list' %}" class="menu__link" id="work_link">Work</a></div>
+      <div class="menu__item menu__item--education"><a href="{% url 'education:education_list' %}" class="menu__link" id="education_link">Education</a></div>
+      <div class="menu__item menu__item--life"><a href="{% url 'life:experience_list' %}" class="menu__link" id="life_link">Life</a></div>
     </div>
   </div>
   {% block content %}{% endblock content %}
+  <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

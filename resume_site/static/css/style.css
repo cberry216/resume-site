@@ -49,6 +49,15 @@ body {
 	text-align: center;
 }
 
+.menu__item--active {
+	/* border-color: green; */
+	border-top: 2px dashed #467446;
+}
+
+.menu__item--active a {
+	color: #467446;
+}
+
 .menu__link {
 	color: black;
 	text-decoration: none;
@@ -86,6 +95,10 @@ body {
 .list {
 	display: flex;
 	flex-direction: column;
+}
+
+.hidden {
+	display: none;
 }
 
 .item {

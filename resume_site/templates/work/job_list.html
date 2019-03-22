@@ -4,6 +4,7 @@
 
 {% block content %}
 <div class="list">
+  <span class="current-menu hidden">work</span>
   {% for job in jobs %}
   <div class="item">
     <h2 class="item__title"><a href="{{ job.get_absolute_url }}">{{ job.company }} - {{ job.title }}</a></h2>

@@ -18,6 +18,7 @@
 </div>
 {% endif %}
 <div class="list">
+  <span class="current-menu hidden">projects</span>
   {% for project in project_list %}
   <div class="item">
     <h2 class="item__title"><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h2>

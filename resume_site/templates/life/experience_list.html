@@ -4,6 +4,7 @@
 
 {% block content %}
 <div class="list">
+  <span class="current-menu hidden">life</span>
   {% for experience in experiences %}
   <div class="item">
     <h2 class="item__title"><a href="{{ experience.get_absolute_url }}">{{ experience.name }}</a></h2>
