@@ -16,11 +16,13 @@ class Project(models.Model):
     github_link = models.CharField(max_length=200)
     publish = models.DateTimeField(default=timezone.now)
     updated = models.DateTimeField(auto_now_add=True)
+    weight = models.IntegerField(
+        default=0, help_text="Affects how projects show up; lighter projects appear first, heavier projects last.")
 
     tags = TaggableManager()
 
     class Meta:
-        ordering = ('-publish',)
+        ordering = ('weight',)
 
     def __str__(self):
         return self.title

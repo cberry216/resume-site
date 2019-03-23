@@ -10,4 +10,4 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'publish')
     search_fields = ('title', 'short_description', 'long_description')
     prepopulated_fields = {'slug': ('title',)}
-    ordering = ('-publish',)
+    ordering = ('weight',)
