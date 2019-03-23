@@ -21,7 +21,7 @@
   <span class="current-menu hidden">projects</span>
   {% for project in project_list %}
   <div class="item">
-    <h2 class="item__title"><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h2>
+    <h2 class="item__title"><a href="{{ project.get_absolute_url }}">{{ forloop.counter }}) {{ project.title }}</a></h2>
     <div class="item__image">
       <a href="{{ project.get_absolute_url }}">
         <img src="{{ project.image.url }}" alt="{{ project.title }} image">
