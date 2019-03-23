@@ -3,8 +3,9 @@
 {% block title %}{{ project.title }}{% endblock title %}
 
 {% block content %}
+<span class="current-menu hidden">projects</span>
 <div class="item">
-  <h2 class="item__title">{{ project.title }}<a href="{{ project.github_link }}" target="_blank"><i
+  <h2 class="item__title"><a href="{{ project.github_link }}" target="_blank"><i
         class="item__github-link fab fa-github"></i></a></h2>
   <div class="item__image">
     <img src="{{ project.image.url }}" alt="{{ project.title }} image">
