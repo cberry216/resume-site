@@ -9,7 +9,9 @@
   <div class="item">
     <h2 class="item__title"><a href="{{ job.get_absolute_url }}">{{ job.company }} - {{ job.title }}</a></h2>
     <div class="item__image">
-      <img src="{{ job.image.url }}" alt="{{job.company }} - {{ job.title }} image">
+      <a href="{{ job.get_absolute_url }}">
+        <img src="{{ job.image.url }}" alt="{{job.company }} - {{ job.title }} image">
+      </a>
     </div>
     <p class="item__description">{{ job.description }} <a href="{{ job.get_absolute_url}}">
         More
