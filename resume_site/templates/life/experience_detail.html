@@ -3,6 +3,7 @@
 {% block title %}{{ experience.name }}{% endblock title %}
 
 {% block content %}
+<span class="current-menu hidden">life</span>
 <div class="item">
   <h4 class="item__title">{{ experience.name }}</h4>
   <div class="item__image">
@@ -16,9 +17,9 @@
     <div class="item__end-date">
       <h4>Ended:</h4>
       {% if experience.date_ended %}
-        <p>{{ experience.date_ended|date:"M Y" }}</p>
+      <p>{{ experience.date_ended|date:"M Y" }}</p>
       {% else %}
-        <p>?</p>
+      <p>Present</p>
       {% endif %}
     </div>
   </div>

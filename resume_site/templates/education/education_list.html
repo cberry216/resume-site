@@ -3,8 +3,8 @@
 {% block title %}Education{% endblock title %}
 
 {% block content %}
+<span class="current-menu hidden">education</span>
 <div class="list">
-  <span class="current-menu hidden">education</span>
   {% for college in colleges %}
   <div class="item">
     <h2 class="item__title"><a href="{{ college.get_absolute_url }}">{{ forloop.counter }}) {{ college.college }}</a>

@@ -3,6 +3,7 @@
 {% block title %}{{ education.abbreviation }}{% endblock title %}
 
 {% block content %}
+<span class="current-menu hidden">education</span>
 <div class="item">
   <h2 class="item__title">{{ education.college}}</h2>
   <div class="item__image">
@@ -16,9 +17,9 @@
     <div class="item__end-date">
       <h4>Ended:</h4>
       {% if education.date_ended %}
-        <p>{{ education.date_ended|date:"M Y" }}</p>
+      <p>{{ education.date_ended|date:"M Y" }}</p>
       {% else %}
-        <p>?</p>
+      <p>Present</p>
       {% endif %}
     </div>
   </div>
