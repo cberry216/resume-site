@@ -6,7 +6,7 @@ from .models import Education
 
 @admin.register(Education)
 class EducationAdmin(admin.ModelAdmin):
-    list_display = ('college', 'slug', 'date_started', 'date_ended', 'publish')
+    list_display = ('college', 'weight', 'slug', 'date_started', 'date_ended', 'publish')
     search_fields = ('name', 'description', 'long_description')
     prepopulated_fields = {'slug': ('college',)}
-    ordering = ('-publish',)
+    ordering = ('weight',)
