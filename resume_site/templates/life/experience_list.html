@@ -7,7 +7,8 @@
   <span class="current-menu hidden">life</span>
   {% for experience in experiences %}
   <div class="item">
-    <h2 class="item__title"><a href="{{ experience.get_absolute_url }}">{{ experience.name }}</a></h2>
+    <h2 class="item__title"><a href="{{ experience.get_absolute_url }}">{{ forloop.counter }}) {{ experience.name }}</a>
+    </h2>
     <div class="item__image">
       <a href="{{ experience.get_absolute_url }}">
         <img src="{{ experience.image.url }}" alt="{{ experience.name }} image">
