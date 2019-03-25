@@ -9,7 +9,9 @@
   <div class="item">
     <h2 class="item__title"><a href="{{ experience.get_absolute_url }}">{{ experience.name }}</a></h2>
     <div class="item__image">
-      <img src="{{ experience.image.url }}" alt="{{ experience.name }} image">
+      <a href="{{ experience.get_absolute_url }}">
+        <img src="{{ experience.image.url }}" alt="{{ experience.name }} image">
+      </a>
     </div>
     <p class="item__description">{{ experience.description }} <a href="{{ experience.get_absolute_url }}"> More
         Info</a>.</p>
