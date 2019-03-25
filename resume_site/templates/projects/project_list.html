@@ -27,6 +27,21 @@
         <img src="{{ project.image.url }}" alt="{{ project.title }} image">
       </a>
     </div>
+    <div class="item__metadata">
+      <div class="item__tags">
+        <p class="metadata-title">Tags:</p>
+        {% for tag in project.tags.all %}
+        <a href="{% url 'projects:project_list_by_tag' tag.name %}" class="item__tag item__tag--green">
+          <p>{{ tag.name }}</p>
+        </a>
+        {% endfor %}
+      </div>
+      <div class="item__language">
+        <p class="metadata-title">Language:</p>
+        <a href="{% url 'projects:project_list_by_language' project.language %}"
+          class="item__tag item__tag--blue">{{ project.language }}</a>
+      </div>
+    </div>
     <p class="item__short-description">{{ project.short_description }} <a href="{{ project.get_absolute_url}}">
         More
         Info</a>.</p>
