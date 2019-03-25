@@ -15,6 +15,8 @@ class Experience(models.Model):
     long_description = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
     updated = models.DateTimeField(auto_now_add=True)
+    weight = models.IntegerField(
+        default=0, help_text="Affects how projects show up; lighter projects appear first, heavier projects last.")
 
     class Meta:
         ordering = ('-publish',)
