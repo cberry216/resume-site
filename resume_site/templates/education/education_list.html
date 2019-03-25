@@ -9,7 +9,9 @@
   <div class="item">
     <h2 class="item__title"><a href="{{ college.get_absolute_url }}">{{ college.college }}</a></h2>
     <div class="item__image">
-      <img src="{{ college.image.url }}" alt="{{ college.college }} image">
+      <a href="{{ college.get_absolute_url }}">
+        <img src="{{ college.image.url }}" alt="{{ college.college }} image">
+      </a>
     </div>
     <p class="item__description"> {{ college.description }} <a href="{{ college.get_absolute_url }}">More Info</a>.</p>
   </div>
