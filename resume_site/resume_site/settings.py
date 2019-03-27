@@ -24,8 +24,6 @@ MEDIA_URL = '/media/'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^iacf-43w#ruh8u1x9_b&tdcgfo+a^ier_j_nhuq*aefcxj3)3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
