@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{{ job.company }}{% endblock title %}
+
+{% block content %}
+<span class="current-menu hidden">work</span>
+<div class="item">
+  <h2 class="item__title">{{ job.company }} - {{ job.title }}<a href="{{ job.website_link}}" target="_blank"><i
+        class="item__website-link fas fa-suitcase"></i></a></h2>
+  <div class="item__image">
+    <img src="{{ job.image.url }}" alt="{{job.company }} - {{ job.title }} image">
+  </div>
+  <div class="item__metadata">
+    <div class="item__start-date">
+      <h4>Started:</h4>
+      <p>{{ job.date_started|date:"M Y"}}</p>
+    </div>
+    <div class="item__end-date">
+      <h4>Ended:</h4>
+      {% if job.date_ended %}
+      <p>{{ job.date_ended|date:"M Y"}}</p>
+      {% else %}
+      <p>Present</p>
+      {% endif %}
+    </div>
+  </div>
+  <p class="item__description">{{ job.description }}</p>
+  <div class="item__long-description">{{ job.long_description|linebreaks }}</div>
+  <p class="item__published">Published {{ job.publish }}</p>
+</div>
+{% endblock content %}

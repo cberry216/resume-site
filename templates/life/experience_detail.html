@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}{{ experience.name }}{% endblock title %}
+
+{% block content %}
+<span class="current-menu hidden">life</span>
+<div class="item">
+  <h4 class="item__title">{{ experience.name }}</h4>
+  <div class="item__image">
+    <img src="{{ experience.image.url}}" alt="{{ experience.name }} image">
+  </div>
+  <div class="item__metadata">
+    <div class="item__start-date">
+      <h4>Started:</h4>
+      <p>{{ experience.date_started|date:"M Y" }}</p>
+    </div>
+    <div class="item__end-date">
+      <h4>Ended:</h4>
+      {% if experience.date_ended %}
+      <p>{{ experience.date_ended|date:"M Y" }}</p>
+      {% else %}
+      <p>Present</p>
+      {% endif %}
+    </div>
+  </div>
+  <p class="item__description">{{ experience.description }}</p>
+  <div class="item__long-description">{{ experience.long_description|linebreaks }}</div>
+  <p class="item__published">Published {{ experience.publish }}</p>
+</div>
+{% endblock content %}
