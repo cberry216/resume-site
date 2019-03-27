@@ -25,9 +25,14 @@ body {
 }
 
 .header__title {
+	margin: 5px 0 2px 0;
+
 	font-size: 1.7em;
 	text-align: center;
-	margin: 5px 0 2px 0;
+}
+
+.header__title a {
+	text-decoration: none;
 }
 
 .header__subtitle {
