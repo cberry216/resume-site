@@ -9,6 +9,7 @@ verify_ssl = true
 django = "*"
 django-taggit = "==0.23.0"
 pillow = "*"
+gunicorn = "==19.9.0"
 
 [requires]
 python_version = "3.7"
