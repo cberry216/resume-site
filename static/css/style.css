@@ -32,6 +32,8 @@ body {
 }
 
 .header__title a {
+	color: #551a8b;
+
 	text-decoration: none;
 }
 
