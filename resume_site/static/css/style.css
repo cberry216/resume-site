@@ -51,7 +51,7 @@ body {
 
 .menu__item--active {
 	/* border-color: green; */
-	border-top: 2px dashed #467446;
+	border-top: 2px dotted #467446;
 }
 
 .menu__item--active a {
