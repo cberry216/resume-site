@@ -1,0 +1,7 @@
+.dist
+.pytest_cache
+.vscode
+**/*__pycache__
+**/*.sqlite*
+**/*.db
+media/
