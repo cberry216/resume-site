@@ -17,8 +17,10 @@ import django_heroku
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Media location
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN = '7Tlb52ssKvAAAAAAAAAACweBB3wt8N-ozJeUilZTSd87CHPAxNJB1BQCZ3O6vVsy'
 
 
 # Quick-start development settings - unsuitable for production
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
 
     # 3rd Party Apps
     'taggit',
+    'storages',
 
     # Django Apps
     'django.contrib.admin',
