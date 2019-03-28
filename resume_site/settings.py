@@ -21,6 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 DROPBOX_OAUTH2_TOKEN = '7Tlb52ssKvAAAAAAAAAACweBB3wt8N-ozJeUilZTSd87CHPAxNJB1BQCZ3O6vVsy'
+DROPBOX_ROOT_PATH = 'media/'
 
 
 # Quick-start development settings - unsuitable for production
