@@ -19,7 +19,7 @@ class Education(models.Model):
         default=0, help_text="Affects how projects show up; lighter projects appear first, heavier projects last.")
 
     class Meta:
-        ordering = ('-publish',)
+        ordering = ('weight',)
 
     def __str__(self):
         return self.college
