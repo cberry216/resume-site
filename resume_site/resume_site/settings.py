@@ -17,15 +17,14 @@ import django_heroku
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Media location
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
-DROPBOX_OAUTH2_TOKEN = '7Tlb52ssKvAAAAAAAAAACweBB3wt8N-ozJeUilZTSd87CHPAxNJB1BQCZ3O6vVsy'
-DROPBOX_ROOT_PATH = 'resume_site/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
+
+SECRET_KEY = '^iacf-43w#ruh8u1x9_b&tdcgfo+a^ier_j_nhuq*aefcxj3)3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -44,7 +43,6 @@ INSTALLED_APPS = [
 
     # 3rd Party Apps
     'taggit',
-    'storages',
 
     # Django Apps
     'django.contrib.admin',
@@ -133,9 +131,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
