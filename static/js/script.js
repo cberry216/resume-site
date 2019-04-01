@@ -13,7 +13,7 @@ function setCurrentMenu() {
 }
 
 function run() {
-  setCurrentMenu();
+  // setCurrentMenu();
 }
 
 window.onload = run;
