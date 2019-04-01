@@ -28,11 +28,10 @@ DROPBOX_ROOT_PATH = 'resume_site/'
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-SECRET_KEY = '^iacf-43w#ruh8u1x9_b&tdcgfo+a^ier_j_nhuq*aefcxj3)3'
 
 # Application definition
 
