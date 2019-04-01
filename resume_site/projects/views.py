@@ -13,6 +13,11 @@ class ProjectListView(ListView):
     template_name = 'projects/project_list.html'
     context_object_name = 'project_list'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['section'] = 'projects'
+        return context
+
 
 def project_list_by_tag(request, tag_slug=None):
     object_list = Project.objects.all()
@@ -24,7 +29,8 @@ def project_list_by_tag(request, tag_slug=None):
 
     return render(request, 'projects/project_list.html', {
         'project_list': object_list,
-        'tag': tag
+        'tag': tag,
+        'section': 'projects'
     })
 
 
@@ -38,10 +44,16 @@ def project_list_by_language(request, language=None):
 
     return render(request, 'projects/project_list.html', {
         'project_list': object_list,
-        'lang': lang
+        'lang': lang,
+        'section': 'projects'
     })
 
 
 class ProjectDetailView(DetailView):
     model = Project
     template_name = 'projects/project_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['section'] = 'projects'
+        return context
