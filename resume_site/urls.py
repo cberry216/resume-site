@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
-# from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
-# from django.views.static import serve
+from life.views import about_me
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('projects.urls')),
+    path('', about_me, name='about'),
+    path('projects/', include('projects.urls')),
     path('work/', include('work.urls')),
     path('education/', include('education.urls')),
     path('life/', include('life.urls')),
