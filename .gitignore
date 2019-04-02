@@ -5,3 +5,4 @@
 **/*.sqlite*
 **/*.db
 media/
+**.pyc
