@@ -3,5 +3,43 @@
 {% block title %}About{% endblock title %}
 
 {% block content %}
-<h3>About Me</h3>
+<div class="about">
+  <h1 class="about__title">My Name is Christopher Berry, and I am a software developer<span class="blinking-cursor">|</span></h1>
+  <p class="about__preamble">I created this site as a supplment to my resumé. Everthing that is found on my resumé can be found here with a more in-depth explanation of the implementation process for all projects. I also provide a more explicit explanation of my responsibilities and time at the places I have worked. I make clear the universities I attended, what I learned from each, and why I transfered. Finally, I describe any other experience that I feel has had a significant impact in my life. To explore my life, use the menu above.</pre>
+  <div class="technical">
+    <p class="technical__label">Techincal Skills</p>
+    <p class="technical__experienced">Experienced</p>
+    <div class="technical__skills technical__skills--experienced">
+      <p class="skill skill--green">Python</p>
+      <p class="skill skill--green">Java</p>
+      <p class="skill skill--green">JavaScript (ES6)</p>
+      <p class="skill skill--green">HTML/CSS</p>
+      <p class="skill skill--green">SQL</p>
+      <p class="skill skill--green">Git</p>
+    </div>
+    <p class="technical__familiar">Familiar</p>
+    <div class="technical__skills technical__skills--familiar">
+      <p class="skill skill--yellow">Django</p>
+      <p class="skill skill--yellow">Node.js</p>
+      <p class="skill skill--yellow">C/C++</p>
+      <p class="skill skill--yellow">Bootstrap</p>
+      <p class="skill skill--yellow">Handlebars.js</p>
+      <p class="skill skill--yellow">jQuery</p>
+      <p class="skill skill--yellow">D3.js</p>
+      <p class="skill skill--yellow">AngularJS</p>
+      <p class="skill skill--yellow">MongoDB</p>
+      <p class="skill skill--yellow">Flexbox/Grid</p>
+      <p class="skill skill--yellow">RESTful APIs</p>
+    </div>
+  </div>
+  <div class="general">
+    <p class="general__label">General Skills</p>
+    <div class="general__skills">
+      <p class="skill skill--blue">International communication.</p>
+      <p class="skill skill--blue">Comfortable in high-octane environments.</p>
+      <p class="skill skill--blue">Ability to teach myself.</p>
+    </div>
+  </div>
+  <p class="about__contact">To contact me, please email me at <a href="mailto:c4berry@student.bridgew.edu">c4berry@student.bridgew.edu</a></p>
+</div>
 {% endblock content %} 
