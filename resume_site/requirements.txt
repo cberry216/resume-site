@@ -9,7 +9,7 @@ django-taggit==0.23.0
 dropbox==9.3.0
 gunicorn==19.9.0
 idna==2.8
-Pillow==5.4.1
+Pillow==6.2.0
 psycopg2==2.7.7
 pycodestyle==2.5.0
 pytz==2018.9
