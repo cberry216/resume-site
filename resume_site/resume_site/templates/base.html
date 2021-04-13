@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CB | {% block title %}{% endblock title %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+  <div class="header">
+    <div class="header__titlehead">
+      <a href="{% url 'projects:project_list' %}">
+      <div class="header__logo" style="background-image: url({% static 'images/cberry.jpeg' %})"></div>
+      </a>
+      <h1 class="header__title"><a href="{% url 'about' %}">Christopher Berry</a></h1>
+      <h3 class="header__subtitle">christopherberry216@gmail.com</h3>
+    </div>
+    <div class="menu">
+      <div class="menu__item menu__item--projects {% if section == 'projects' %}menu__item--active{% endif %}"><a href="{% url 'projects:project_list' %}" class="menu__link" id="projects_link">Projects</a></div>
+      <div class="menu__item menu__item--work {% if section == 'work' %}menu__item--active{% endif %}"><a href="{% url 'work:job_list' %}" class="menu__link" id="work_link">Work</a></div>
+      <div class="menu__item menu__item--education {% if section == 'education' %}menu__item--active{% endif %}"><a href="{% url 'education:education_list' %}" class="menu__link" id="education_link">Education</a></div>
+      <div class="menu__item menu__item--life {% if section == 'life' %}menu__item--active{% endif %}"><a href="{% url 'life:experience_list' %}" class="menu__link" id="life_link">Life</a></div>
+    </div>
+  </div>
+  {% block content %}{% endblock content %}
+  <div class="footer"></div>
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
