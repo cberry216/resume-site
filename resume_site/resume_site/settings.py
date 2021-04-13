@@ -30,6 +30,8 @@ DROPBOX_ROOT_PATH = 'resume_site/'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+SECRET_KEY = 'ya$u&mh)b(+pg&@g$twcn$#ii((-9_65=$%vi39!g&ttcdcqm3'
+
 ALLOWED_HOSTS = ['*']
 
 
