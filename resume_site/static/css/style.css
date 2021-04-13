@@ -377,6 +377,8 @@ body {
 	animation-duration: 1s;
 	animation-name: blink;
 	animation-iteration-count: infinite;
+
+	font-size: .9em;
 }
 
 @keyframes blink {
