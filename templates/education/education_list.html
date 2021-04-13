@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Education{% endblock title %}
+
+{% block content %}
+<span class="current-menu hidden">education</span>
+<div class="list">
+  {% for college in colleges %}
+  <div class="item">
+    <h2 class="item__title"><a href="{{ college.get_absolute_url }}">{{ forloop.counter }}) {{ college.college }}</a>
+    </h2>
+    <div class="item__image">
+      <a href="{{ college.get_absolute_url }}">
+        <img src="{{ college.image.url }}" alt="{{ college.college }} image">
+      </a>
+    </div>
+    <p class="item__description"> {{ college.description }} <a href="{{ college.get_absolute_url }}">More Info</a>.</p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}

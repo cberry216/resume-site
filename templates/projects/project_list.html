@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Projects{% endblock title %}
+
+{% block content %}
+{% if tag %}
+<div class="filter">
+  <h4 class="filter__showing">Showing Projects Tagged:</h4>
+  <div class="item__tag item__tag--green item__tag--filter">{{tag.name}}</div>
+  <a href="{% url 'projects:project_list' %}" class="filter__close">&times</a>
+</div>
+{% endif %}
+{% if lang %}
+<div class="filter">
+  <h4 class="filter__showing">Showing Projects Written In:</h4>
+  <div class="item__tag item__tag--blue item__tag--filter">{{ lang }}</div>
+  <a href="{% url 'projects:project_list' %}" class="filter__close">&times</a>
+</div>
+{% endif %}
+<div class="list">
+  <span class="current-menu hidden">projects</span>
+  {% for project in project_list %}
+  <div class="item">
+    <h2 class="item__title"><a href="{{ project.get_absolute_url }}">{{ forloop.counter }}) {{ project.title }}</a></h2>
+    <div class="item__image">
+      <a href="{{ project.get_absolute_url }}">
+        <img src="{{ project.image.url }}" alt="{{ project.title }} image">
+      </a>
+    </div>
+    <div class="item__metadata">
+      <div class="item__tags">
+        <p class="metadata-title">Tags:</p>
+        {% for tag in project.tags.all %}
+        <a href="{% url 'projects:project_list_by_tag' tag.name %}" class="item__tag item__tag--green">
+          <p>{{ tag.name }}</p>
+        </a>
+        {% endfor %}
+      </div>
+      <div class="item__language">
+        <p class="metadata-title">Language:</p>
+        <a href="{% url 'projects:project_list_by_language' project.language %}"
+          class="item__tag item__tag--blue">{{ project.language }}</a>
+      </div>
+    </div>
+    <p class="item__short-description">{{ project.short_description }} <a href="{{ project.get_absolute_url}}">
+        More
+        Info</a>.</p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}
